@@ -1,3 +1,16 @@
+/*
+Theme Name: Astrokosmos
+Theme URI: https://www.astrokosmos.com.mx
+Author: Monitos Digitales
+Author URI: https://monitosdigitales.com/
+Description: Este es un tema creado especificamente para la empresa Astrokosmos S.A. para los fines de comercializacion que requieran.
+Version: 0.1
+License: MIT
+Tags: responsive, enterprise, ecommerce
+Text Domain: astrokosmos
+
+This theme, like WordPress, is licensed under the MIT.
+ */
 body {
   text-align: center;
 }
@@ -8,7 +21,8 @@ body {
   margin:0px auto;
 }
 #header {
-  border: 2px #a2a2a2 solid;
+  background-color: #2F7FC3;
+  color: #fff;
 }
 #content {
   width: 75%;
