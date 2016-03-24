@@ -5,7 +5,7 @@ var nano = require('gulp-cssnano');
 var autoprefixer = require('gulp-autoprefixer');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
-
+var rename = require('gulp-rename');
 //Main paths
 var config = {
   styles: {
@@ -33,7 +33,7 @@ gulp.task('server', function(){
 gulp.task('watch', function(){
   gulp.watch(config.images.watch, ['images']);
   gulp.watch(config.styles.watch, ['build:css']);
-  gulp.watch(config.html.watch, ['build'] );
+  //gulp.watch(config.html.watch, ['build'] );
 });
 
 //Concatenate javascripts
@@ -56,6 +56,7 @@ gulp.task('build:css', function(){
   .pipe(nano({
     discardComments: {removeAll: false}
   }))
+  .pipe(rename('style.css'))
   .pipe(gulp.dest(config.styles.output));
 });
 
