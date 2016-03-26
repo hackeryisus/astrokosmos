@@ -1,0 +1,13 @@
+$mainfont: Helvetica, sans-serif;
+
+html, body {
+	font-family: $mainfont;
+	font-size: 16px;
+}
+
+h2{
+	font-size: 4rem;
+	text-align: center;
+	padding: .3em;
+	text-shadow: 2px 4px 1px rgba(0,0,0,0.6);
+}
