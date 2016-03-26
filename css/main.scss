@@ -69,8 +69,7 @@ $break-large: 768px;
 
 		&-item{
       a{
-        text-decoration: none;
-				color: $white;
+        color: $white;
 				width: 100%;
 				padding: 1.2em 1.2em 1.2em 0;
 				display: block;
@@ -124,4 +123,25 @@ $break-large: 768px;
 
 #content{
 	margin-top: 15%;
+}
+#footer{
+	background-color: $lightblue;
+}
+
+.contactbar {
+  margin-top: 10%;
+}
+.contactbar-item {
+  margin: 1.5em 2em 0 2em;
+	list-style: none;
+	a {
+	  text-align: center;
+	  color: #fff;
+	  font-size: 2em;
+	}
+}
+#pie{
+	color: $white;
+	font-size: 10px;
+
 }
