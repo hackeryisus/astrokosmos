@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/jemandez/astrokosmos#readme",
   "devDependencies": {
+    "browser-sync": "^2.11.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",

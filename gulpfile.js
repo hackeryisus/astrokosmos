@@ -1,11 +1,16 @@
-var gulp = require('gulp');
-var webserver = require('gulp-webserver');
-var sass = require('gulp-sass');
-var nano = require('gulp-cssnano');
-var autoprefixer = require('gulp-autoprefixer');
-var imagemin = require('gulp-imagemin');
-var pngquant = require('imagemin-pngquant');
-var rename = require('gulp-rename');
+var gulp          = require('gulp');
+var webserver     = require('gulp-webserver');
+var browserSync   = require('browser-sync'),
+reload            = browserSync.reload;
+var sass          = require('gulp-sass');
+var nano          = require('gulp-cssnano');
+var autoprefixer  = require('gulp-autoprefixer');
+var imagemin      = require('gulp-imagemin');
+var pngquant      = require('imagemin-pngquant');
+var rename        = require('gulp-rename');
+
+var url 		= 'neat.dev'
+
 //Main paths
 var config = {
   styles: {
@@ -19,15 +24,30 @@ var config = {
   }
 }
 
-//Create server
-gulp.task('server', function(){
-  gulp.src('./dist')
-    .pipe(webserver({
-      host:'0.0.0.0',
-      port: 8080,
-      livereload: true
-    }));
+gulp.task('browser-sync', function() {
+	var files = [
+					'**/*.php',
+					'**/*.{png,jpg,gif}'
+				];
+	browserSync.init(files, {
+
+		// Read here http://www.browsersync.io/docs/options/
+		proxy: url,
+
+		// port: 8080,
+
+		// Tunnel the Browsersync server through a random Public URL
+		// tunnel: true,
+
+		// Attempt to use the URL "http://my-private-site.localtunnel.me"
+		// tunnel: "ppress",
+
+		// Inject CSS changes
+		injectChanges: true
+
+	});
 });
+
 
 //Watch changes in files
 gulp.task('watch', function(){
@@ -56,8 +76,10 @@ gulp.task('build:css', function(){
   .pipe(nano({
     discardComments: {removeAll: false}
   }))
+  .pipe(reload({stream:true}))
   .pipe(rename('style.css'))
-  .pipe(gulp.dest(config.styles.output));
+  .pipe(gulp.dest(config.styles.output))
+  .pipe(reload({stream:true}));
 });
 
 //Add inline css to html and minify html
@@ -88,4 +110,4 @@ gulp.task('minimages', function() {
 //Build task
 gulp.task('build', ['build:css', 'minimages']);
 
-gulp.task('default', ['server','build', 'watch']);
+gulp.task('default', ['browser-sync','build', 'watch']);
