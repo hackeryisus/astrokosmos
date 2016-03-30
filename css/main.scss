@@ -4,7 +4,7 @@
 @import "flexboxgrid.min";
 
 
-$black: #333;
+
 $white: #fff;
 $blue: #0f3a69;
 $lightblue: #1f6cc1;
@@ -28,7 +28,6 @@ $break-large: 768px;
 	font-family: $mainfont;
 	background-color: $blue;
 	color: $white;
-	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -37,6 +36,7 @@ $break-large: 768px;
 	&-logo{
   	font-size: 1.5rem;
   	margin-left: 1rem;
+		color: $white;
 		a{
 			text-decoration: none;
 		}
@@ -113,7 +113,7 @@ $break-large: 768px;
   				a{
   					padding: 0.4em;
   					width: 80px;
-						color: $black;
+						color: $black-text;
           }
         }
       }
@@ -145,3 +145,22 @@ $break-large: 768px;
 	font-size: 10px;
 
 }
+
+.slider{
+	justify-content: center;
+	&-image{
+		max-width: 100%;
+		height: auto;
+
+	}
+}
+
+.highlightProducts{
+	text-align: center;
+}
+.responsiveimage{
+			max-width: 300px;
+			height: auto;
+			margin: 1em, 1em;
+			padding: 0 2em;
+	}

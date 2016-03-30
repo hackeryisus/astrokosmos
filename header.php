@@ -22,9 +22,10 @@
 <body>
 
 <header class="header">
-  <div class="row around-xs">
-    <h1 class="header-logo">Astrokosmos</h1>
-    <button id="btnMenu" class="header-btn-nav"><i class="fa fa-bars"></i></button>
+  <div class="">
+    <h1 class="header-logo col-xs-12 col-sm-4">Astrokosmos</h1>
+    <p class="col-xs-10 col-sm-6">Diseño, tecnología y observación</p>
+    <button id="btnMenu" class="header-btn-nav col-xs-2"><i class="fa fa-bars"></i></button>
   </div>
   <nav class="header-menu-navbar">
     <ul id="navbarMenu" class="header-menu-list">
