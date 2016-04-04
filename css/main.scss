@@ -6,6 +6,7 @@
 
 
 $white: #fff;
+$gray: #737d86;
 $blue: #0f3a69;
 $lightblue: rgba(#264c74, 0.8);
 
@@ -21,7 +22,8 @@ $break-large: 768px;
 }
 
 #title{
-  margin-top: 0em;
+	text-transform: uppercase;
+	font-weight: 700;
 }
 
 .header{
@@ -44,8 +46,10 @@ $break-large: 768px;
 
 	&-slogan{
 		font-size: .8em;
-		font-style: italic;
+		margin-left: 1rem;
+		margin-top: -.9em;
 		padding-left: 1em;
+		font-weight: 300;
 	}
 
 	&-btn-nav{
@@ -65,6 +69,7 @@ $break-large: 768px;
 	&-menu-list{
 		list-style-type: none;
 		height: 0;
+		padding-left: 0;
 		overflow: hidden;
 		transition: height 0.3s ease;
 		text-align: center;
@@ -77,9 +82,12 @@ $break-large: 768px;
       a{
         color: $white;
 				width: 100%;
-				padding: 1.2em 1.2em 1.2em 0;
+				padding: 1.2em 0;
 				display: block;
       }
+			a:hover{
+				background-color: $blue+15;
+			}
     }
   }
 
@@ -110,17 +118,21 @@ $break-large: 768px;
 
   		&-menu-list{
   			height: 100%;
+				text-align: left;
 
   			&-item{
 					display: inline-block;
-  				border: solid 2px;
-  				border-radius: 10px;
-  				margin: 0 .2em;
   				a{
-  					padding: 0.4em;
-  					width: 80px;
-						color: $black-text;
+						margin: 1em 1.5em 0.3em;
+						text-transform: uppercase;
+						text-align: center;
+						font-weight: 700;
+						color: $gray;
           }
+					a:hover{
+						color: $white;
+						background-color: $gray;
+					}
         }
       }
     }
