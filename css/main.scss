@@ -4,11 +4,12 @@
 @import "flexboxgrid.min";
 
 
-
+//Colors
 $white: #fff;
 $gray: #737d86;
 $blue: #0f3a69;
 $lightblue: rgba(#264c74, 0.8);
+$green: #0F9D58;
 
 $break-large: 768px;
 
@@ -50,6 +51,14 @@ $break-large: 768px;
 		margin-top: -.9em;
 		padding-left: 1em;
 		font-weight: 300;
+	}
+
+	&-number{
+		font-size: 1.5em;
+		&--green{
+			color: $green;
+			font-size: 1.7em;
+		}
 	}
 
 	&-btn-nav{

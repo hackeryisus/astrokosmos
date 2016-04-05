@@ -23,10 +23,13 @@
 <body>
 
 <header class="header">
-  <div class="row">
+  <div class="row middle-sm">
     <div class="col-xs-9 col-sm-6">
       <h1 id="title" class="header-logo">Astrokosmos</h1>
       <p class="header-slogan">Diseño, tecnología y observación</p>
+    </div>
+    <div class="header-number col-sm-offset-2 col-sm-4">
+        <i class="header-number--green fa fa-whatsapp"></i> +521 222 516 0533
     </div>
     <button id="btnMenu" class="header-btn-nav col-xs-3"><i class="fa fa-bars"></i></button>
   </div>
