@@ -54,7 +54,8 @@ $break-large: 768px;
 	}
 
 	&-number{
-		font-size: 1.5em;
+		font-size: 1.3em;
+		margin-left: 1rem;
 		&--green{
 			color: $green;
 			font-size: 1.7em;
@@ -151,13 +152,6 @@ $break-large: 768px;
 #content{
 	margin-top: 15%;
 }
-#footer{
-	background-color: $lightblue;
-	h3{
-		color: $white;
-		font-weight: 700;
-	}
-}
 
 .contactbar {
   margin-top: 10%;
@@ -170,19 +164,33 @@ $break-large: 768px;
 	  font-size: 5em;
 	}
 }
-#footer-copyright{
-	color: $white;
-	background-color: $lightblue - 20;
-	font-size: 9px;
-	line-height: 0%
+
+
+#footer{
+	background-color: $lightblue;
+	h3{
+		color: $white;
+		font-weight: 700;
+	}
+	&-newsletter{
+		padding-left: 1.5em;
+	}
+	&-direcction{
+		font-weight: 300;
+	}
+	&-copyright{
+		color: $white;
+		background-color: $lightblue - 20;
+		font-size: 9px;
+		text-align: center;
+	}
 }
 
 .slider{
-	justify-content: center;
 	&-image{
-		max-width: 100%;
-		height: auto;
-
+		max-width: auto;
+		height: 50vh;
+		overflow: hidden;
 	}
 }
 
@@ -199,23 +207,5 @@ $break-large: 768px;
 			margin: 1em, 1em;
 			padding: 0 2em;
 		}
-	}
-}
-
-.darken {
-  background-image:
-	    linear-gradient(
-	      rgba(0, 0, 0, 0.7),
-	      rgba(0, 0, 0, 0.3)
-	    );
-	}
-.module {
-	background-size: cover;
-	p{
-		font-family: 'Roboto', sans-serif;
-	  font-weight: 900;
-	  color: white;
-	  text-transform: uppercase;
-	  font-size: 2rem;
 	}
 }
